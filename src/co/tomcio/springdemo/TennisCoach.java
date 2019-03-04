@@ -1,16 +1,14 @@
 package co.tomcio.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
 	@Autowired
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
-	@Autowired
-	private TemporaryService temporaryService;
-		
-	
 	
 	public TennisCoach() {
 		System.out.println(">>TennisCoach: inside default constructor");
@@ -39,10 +37,6 @@ public class TennisCoach implements Coach {
 	}
 
 
-	public String getTemp() {
-		// TODO Auto-generated method stub
-		return temporaryService.getTemp();
-	}
 
 	
 
