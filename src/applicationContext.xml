@@ -16,7 +16,6 @@
 	</bean>
 
 <!-- add entry to enable component scanning -->
- <context:property-placeholder location="classpath:sport.properties"/>
 <context:component-scan base-package="co.tomcio.springdemo"></context:component-scan>
 	
 
